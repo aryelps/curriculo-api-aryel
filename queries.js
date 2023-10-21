@@ -1,11 +1,9 @@
+const { DatabaseError } = require('pg');
+
 const Pool = require('pg').Pool
 const pool = new Pool({
-  user: 'postgres',
-  host: 'db.jhsfawoupzdprqbkqptr.supabase.co',
-  database: 'postgres',
-  password: 'ujJSI83OnX3CUQwd',
-  port: 5432,
-})
+  connectionString: DATABASE,
+ })
 const getCurriculos = (request, response) => {
     pool.query('SELECT * FROM curriculos ORDER BY id ASC', (error, results) => {
       if (error) {
