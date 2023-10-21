@@ -1,0 +1,8 @@
+version: '3'
+services:
+  my-service:
+    image: curriculo-aryel
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE: postgresql://postgres:ASOPUDGAYG1P2Y1PE8Y21GEP971GD9BC9B1@db.jhsfawoupzdprqbkqptr.supabase.co:5432/postgres
